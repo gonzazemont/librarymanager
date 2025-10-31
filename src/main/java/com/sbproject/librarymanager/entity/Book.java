@@ -26,8 +26,8 @@ public class Book {
     @Column(unique = true, length = 13)
     private String isbn;
 
-    @Column(name = "published_year")
-    private Integer publishedYear;
+    @Column(name = "publication_year")
+    private Integer publicationYear;
 
     @Column(length = 100)
     private String editorial;
@@ -37,12 +37,12 @@ public class Book {
 
     @Enumerated(EnumType.STRING)
     @Column(length = 50)
-    private BookGenre gender;
+    private BookGenre genre;
 
     @Enumerated(EnumType.STRING)
     @Column(length = 20)
     private BookStatus status;
 
     @Column(name = "date_acquired")
-    private LocalDate dateAcquired;
+    private LocalDate acquisitionDate;
 }
