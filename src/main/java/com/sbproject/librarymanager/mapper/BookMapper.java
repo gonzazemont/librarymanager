@@ -2,6 +2,7 @@ package com.sbproject.librarymanager.mapper;
 
 import com.sbproject.librarymanager.dto.BookResponseDTO;
 import com.sbproject.librarymanager.dto.CreateBookDTO;
+import com.sbproject.librarymanager.dto.UpdateBookDTO;
 import com.sbproject.librarymanager.entity.Book;
 import org.springframework.stereotype.Component;
 
@@ -24,7 +25,7 @@ public class BookMapper {
     }
 
     //convert UpdateBookDTO to entity (updates an existing entity)
-    public void updateEntity(CreateBookDTO dto, Book book) {
+    public void updateEntity(UpdateBookDTO dto, Book book) {
         book.setTitle(dto.getTitle());
         book.setAuthor(dto.getAuthor());
         book.setIsbn(dto.getIsbn());
