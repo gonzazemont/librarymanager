@@ -40,5 +40,5 @@ public class CreateBookDTO {
     @NotNull(message = "Status is required")
     private BookStatus status;
 
-    private LocalDate dateAcquired;
+    private LocalDate acquisitionDate;
 }
