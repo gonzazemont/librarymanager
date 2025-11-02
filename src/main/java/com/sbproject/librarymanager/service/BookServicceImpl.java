@@ -103,7 +103,7 @@ public class BookServicceImpl implements BookService{
     @Override
     @Transactional(readOnly = true)
     public List<BookResponseDTO> getBooksByAuthor(String author) {
-        List<Book> books = bookRepository.findByAuthorIgnoreCase(author);
+        List<Book> books = bookRepository.findByAuthorContainingIgnoreCase(author);
         return books.stream()
                 .map(bookMapper::toResponseDTO)
                 .collect(Collectors.toList());

@@ -22,7 +22,7 @@ public interface BookRepository extends JpaRepository <Book, Long> {
     boolean existsByIsbn(String isbn);
 
     //find books by author (ingoring case)
-    List<Book> findByAuthorIgnoreCase(String author);
+    List<Book> findByAuthorContainingIgnoreCase(String author);
 
     // find books by genre
     List<Book> findByGenre(String genre);

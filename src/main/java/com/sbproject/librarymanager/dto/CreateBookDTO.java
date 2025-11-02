@@ -21,7 +21,7 @@ public class CreateBookDTO {
     @Size(min=1, max=100, message = "Author must be between 1 and 100 characters")
     private String author;
 
-    @Pattern(regexp = "^(?:\\\\d{10}|\\\\d{13})$", message = "ISBN must be either 10 or 13 digits")
+    @Pattern(regexp = "^(?:\\d{10}|\\d{13})$", message = "ISBN must be either 10 or 13 digits")
     private String isbn;
 
     @Min(value = 1000, message = "Published year must be greater than 999")
